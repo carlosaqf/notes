@@ -1,3 +1,5 @@
 # notes
 
-## Heading
+## Topics
+- [Big O](./topics/bigO.md)
+-
