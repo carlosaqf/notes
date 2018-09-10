@@ -7,6 +7,11 @@
 - Web scraping nested HTML? Tree
 - Scheduler? Binary heap
 
+## Linked Lists
+1. [Singly Linked Lists](./singlyLinked.md)
+2. [Doubly Linked Lists](./doublyLinked.md)
+
+
 ## ES2015 Class Syntax
 
 What is a class?
