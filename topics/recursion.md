@@ -71,6 +71,11 @@ Big O:
 - Measure **time complexity** of a recursive function as **the number of recursive calls you need to make** relative to the input
 - Measure **space complexity** as the **maximum number of functions on the call stack** at a given time, since the call stack requires memory.
 
+## Tail Call Optimization
+
+- ES2015 allows for _tail call optimization_, where you can make some functions calls without growing the call stack.
+- By using the **return** keyword in a specific fashion we can extract output from a function without keeping it on the call stack.
+
 ## Recap
 
 - A recursive function is a function that invokes itself
