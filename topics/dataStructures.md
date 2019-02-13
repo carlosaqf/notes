@@ -1,4 +1,5 @@
 # Data Structures
+[Topics](../README.md)
 
 - Data Structures are collections of values, the relationships among them, and the functions or operations that can be applied to the data
 - Different data structures excel at different things. Some are highly specialized, while others are more generally used.
