@@ -78,7 +78,7 @@ An `<input>` element represents a *variable* that gets sent to the backend serve
 
 You can also pre-populate the value with a *value* attribute inside of `<input>`.
 
-### Text Input Styling
+### Styling Text Input
 
 You can style specific elements using a new type of CSS selector called an *attribute selector*.
 
@@ -106,6 +106,98 @@ Using `type='email'` allows us to automatically check if a user entered an email
 
 *placeholder* allows us to display default text when the `<input>` element is empty. 
 
+### Styling Email Input
+
 Similar to text input, we can style email inputs specifically using the CSS selector: `.form-row input[type='email']`
 
+## Radio Buttons
+
+Using `<input type='radio'>` transforms the input field into a radio button. Radio buttons always work in groups, which means we need a label for each `<input>` and also a way to group the radio buttons and label the entire group.
+
+This is where `<fieldset>` and `<legend>` elements come in.
+
+For every radio button group you create, you shoud:
+
+- Wrap in a `<fieldset>` and label with a `<legend>`
+- Associate a `<label>` with each button
+- Use the same *name* attribute for each radio button
+- Use different *value* attributes for each radio
+
+```HTML
+<fieldset class='legacy-form-row'>
+    <legend>Types of Talk</legend>
+    <input id='talk-type-1'
+           name='talk-type'
+           type='radio'
+           value='main-stage' />
+    <label for='talk-type-1' class='radio-label'>Main Stage</label>
+    <input id='talk-type-2'
+           name='talk-type'
+           type='radio'
+           value='workshop'
+           checked />
+    <label for='talk-type-2' class='radio-label'>Workshop</label>
+</fieldset>
+```
+Since we cannot enter customer values in to a radio button, each need an explicit *value* attribute. This is the value that will get sent to the server when the user submits the form. Again, each radio button must have the same *name* attibute for the form to know they were a part of the same group.
+
+There is also the boolean attribute of *checked*
+
+### Styling Radio Buttons
+
+`<fieldset>` doesn't support flexbox, so an example of styling for mobile and desktop would be as follows:
+
+```css
+.legacy-form-row{
+    border: none;
+    margin-bottom: 40px;
+}
+.legacy-form-row legend{
+    margin-bottom: 15px;
+}
+.legacy-form-row .radio-label{
+    display: block;
+    font-size: 14px;
+    padding: 0 20px 0 10px;
+}
+.legacy-form-row input[type='radio']{
+    margin-top: 2px;
+}
+.legacy-form-row .radio-label,
+.legacy-form-row input[type='radio']{
+    float: left;
+}
+
+@media only screen and (min-width: 700px){
+    .legacy-form-row{
+        margin-bottom: 10px;
+    }
+    .legacy-form-row legend{
+        width: 120px;
+        text-align: right;
+        padding-right: 20px;
+    }
+    .legacy-form-row legend{
+        float: left;
+    }
+}
+```
+
+## Select Elements (Dropdown Menus)
+
+The `<select>` element represents the dropdown menu and each item is represented by the `<option>` element
+
+```html
+<div class='form-row'>
+    <label for='t-shirt'>T-Shirt Size</label>
+    <select id='t-shirt' name='t-shirt'>
+        <option value='xs'>Extra Small</option>
+        <option value='s'>Small</option>
+        <option value='m'>Medium</option>
+        <option value='l'>Large</option>
+    </select>
+</div>
+```
+
+Here the *name* and *value* attributes get passed to the backend but instead of being defined on a single element, they are spread across the `<select>` and `<option>` elements.
 
