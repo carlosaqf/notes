@@ -7,6 +7,7 @@
 - [Data Structures](./topics/dataStructures.md)
 - [HTML - Forms](./topics/htmlForms.md)
 - [HTML - Responsive Design](.topics/htmlResponsiveDesign.md)
+- [HTML - Web Typography](.topics/htmlTypography.md)
 - [React](./topics.react.md)
 - [Recursion](./topics/recursion.md)
 - [Singly Linked Lists](./topics/singlyLinked.md)
