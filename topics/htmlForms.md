@@ -201,3 +201,110 @@ The `<select>` element represents the dropdown menu and each item is represented
 
 Here the *name* and *value* attributes get passed to the backend but instead of being defined on a single element, they are spread across the `<select>` and `<option>` elements.
 
+## Textareas
+
+`<textarea>` creates a multi-line text field
+
+```html
+<div class='form-row'>
+    <label for='abstract'>Abstract</label>
+    <textarea id='abstract' name='abstract'></textarea>
+    <div class='instructions'>Describe your...</div>
+</div>
+```
+
+Note: You *always* need a closing `</textarea>` tag. Also, to add any default text, it must be placed inbetween the tags as opposed to a *value* attribute.
+
+### Styling Textareas
+
+```css
+.form-row textarea{
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+    /* browsers by default allows the user to resize the textarea, to disable this we add the line  `resize: none;`  */
+}
+.form-row .instrcutions{
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+```
+
+## Checkboxes
+
+Checkboxes allow users to select as many options as they want, as opposed to radio buttons
+
+```html
+<div class='form-row'>
+    <label class='checkbox-label' for='available'>
+    <input id='availble'
+           name='available'
+           type='checkbox'
+           value='is-available' />
+    <span>I'm actually available the date of the talk</span>
+    </label>
+</div>
+```
+
+Note: We use `<label>` here to wrap the `<input>` element instead of making it a separate element.
+
+## Submit Buttons
+
+```html
+<div class='form-row'>
+    <button>Submit</button>
+</div>
+```
+
+Clicking the button tells the browser to validate all of the `<input />` elements in the form and submit it to the action URL
+
+### Styling Buttons
+
+```css
+.form-row button{
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #FFFFFF;
+    background-color: #5995DA;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px 40px;
+    cursor: pointer;
+}
+.form-row button:hover{
+    background-color: #76AEED;
+}
+.form-row button:active{
+    background-color: #407FC7;
+}
+```
+
+`button:hover` and `button:active` should be two styles to incorporate in css
+
+# Summary
+
+The different types of form elements include:
+- `<input type='text' />`
+- `<input type='email' />`
+- `<input type='radio' />`
+- `<select>` & `<option>`
+- `<textarea>`
+- `<input type='checkbox' />`
+- `<button>`
+
+There are two ways generally to process forms:
+
+- Use the `action` attribute to send the form data to a backend URL, which then redirects to a success or error page.
+- Use AJAX queries to submit the form without leaving the page. Success or error messages are displayed on the same page by manipulating the HTML with JS
+
