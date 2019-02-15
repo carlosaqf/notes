@@ -1,4 +1,5 @@
 # Code-Splitting
+[Advanced React Topics](../reactAdvanced.md)
 
 ## Bundling
 Most React apps have files "bundled" using tools like *Webpack* or *Browserify*.

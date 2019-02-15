@@ -9,6 +9,6 @@
 - [HTML - Responsive Design](./topics/htmlResponsiveDesign.md)
 - [HTML - Web Typography](./topics/htmlTypography.md)
 - [React](./topics.react.md)
-- [Advanced React](./topics/reactAdvanced)
+- [React - Advanced](./topics/reactAdvanced.md)
 - [Recursion](./topics/recursion.md)
 - [Singly Linked Lists](./topics/singlyLinked.md)
