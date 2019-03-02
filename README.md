@@ -8,7 +8,7 @@
 - [HTML - Forms](./topics/htmlForms.md)
 - [HTML - Responsive Design](./topics/htmlResponsiveDesign.md)
 - [HTML - Web Typography](./topics/htmlTypography.md)
-- [React](./topics.react.md)
+- [React](./topics/react.md)
 - [React - Advanced](./topics/reactAdvanced.md)
 - [Recursion](./topics/recursion.md)
 - [Singly Linked Lists](./topics/singlyLinked.md)
